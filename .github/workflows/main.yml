@@ -8,6 +8,9 @@ jobs:
       - name: Hello world action step
         id: hello
         uses: aslepakurov/vgs-route-sync@v1
+        env:
+          VGS_CLIENT_ID: ${{ secrets.VGS_CLIENT_ID }}
+          VGS_CLIENT_SECRET: ${{ secrets.VGS_CLIENT_SECRET }}
         with:
           who-to-greet: 'This is a test'
       # Use the output from the `hello` step
